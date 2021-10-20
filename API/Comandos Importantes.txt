@@ -1,0 +1,38 @@
+--CRIAR UMA API EM PYTHON--
+--Comandos importantes--
+/*Install dependencies*/
+pip3 install flask
+pip3 install flask-sqlalchemy
+
+//Salvas dependencias em um arquivo txt
+pip3 freeze > requirements.txt
+
+
+--------------------
+depois de definir o import no .py e fazer uma route
+-------------------
+set FLASK_APP=app.py
+set FLASK_DEBUG=1
+set FLASK_ENV=development
+flask run -- Para rodar o servidor
+
+-----------------------
+
+comandos sqlite db flask
+from application import db
+
+how to create the tables
+db.create_all()
+from application import Drink
+drink = Drink(name ="Energetico")
+drink
+db.session.add(drink)
+db.session.commit()
+
+como ver tudo na tabela
+
+drink.query.all()
+
+simple way to create 
+db.session.add(Drink(name="teste))
+db.session.commit()
